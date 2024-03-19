@@ -205,7 +205,7 @@ body {
     background: rgb(0 0 0 /.8);
     z-index: 1;
 
-    /* display: none; */
+    display: none;
 }
 
 /* Mobile Navbar Container  */
@@ -232,7 +232,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 0 2rem 0;
+    padding: 3.2rem 0 2rem 0;
 }
 
 
@@ -358,11 +358,18 @@ body {
 
 @media (max-width:450px) {
     .mobile__navbar__container {
-        min-width: 275px;
+        min-width: 350px;
         width: 70%;
     }
     .mobile__navbar__text {
         font-size: 1rem;
         text-align: center;
+    }
+}
+
+@media (max-width:375px) {
+    .mobile__navbar__container {
+        min-width: 315px;
+        width: 70%;
     }
 }
