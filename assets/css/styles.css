@@ -12,6 +12,7 @@
   --primary: #ff4256;
   --secondary: #201f27;
   --light: snow;
+  --black: #1b1a1a;
 
   /* Generated Colors  */
   --baby-powder: #f6faf6ff;
@@ -34,17 +35,78 @@ body {
   position: relative;
 }
 
-/* informational Bar  */
-.informational__bar {
+/* Formational Wrapper */
+.formational__wrapper {
   width: 100%;
-  height: auto;
-  padding: 1rem 0;
-
-  background: #000000;
+  padding: 0.5rem 0;
+  background: var(--black);
 
   display: flex;
   justify-content: center;
   align-items: center;
+  color: snow;
+}
+
+/* Formational Container */
+.formational__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: var(--mainWidth);
+  height: auto;
+}
+
+.formational__container svg {
+  width: 12px;
+  fill: snow;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+/* Formational Social  */
+.formational__social {
+  display: flex;
+  list-style: none;
+  gap: 0.7rem;
+}
+
+.formational__social li {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.formational__social li:hover {
+  color: var(--off-red-rgb);
+  filter: brightness(1.2);
+}
+
+.formational__social li:hover > svg {
+  fill: var(--off-red-rgb);
+}
+
+/* Formational Text */
+.formational__text {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.formational__text:hover {
+  color: var(--off-red-rgb);
+}
+
+.formational__text:hover > svg {
+  fill: var(--off-red-rgb);
 }
 
 /* Header Wrapper  */
@@ -81,14 +143,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10px rgb(0 0 0 /0.9);
+  box-shadow: 0 5px 10px rgb(0 0 0 /0.9);
+
   background: #ffffff;
 }
 
 /* Navbar Container  */
 .navbar__container {
   width: var(--mainWidth);
-  height: 3rem;
+  height: 2.5rem;
 
   display: flex;
   justify-content: space-between;
@@ -99,7 +162,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 /* Navbar Brand  */
@@ -120,7 +183,7 @@ body {
 
 /* Navbar Logo Image  */
 .navbar__logo {
-  width: 3rem;
+  width: 2.5rem;
 }
 
 /* Navbar Header  */
@@ -140,9 +203,9 @@ body {
 }
 
 .navbar li {
-  padding: 1.9rem 0.1rem;
+  padding: 1.6rem 0;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .navbar li.active {
@@ -157,13 +220,16 @@ body {
 .navbar li:hover {
   box-shadow: inset 0 -4px var(--off-red-rgb);
 }
+.navbar li:hover > a {
+  box-shadow: inset 0 -4px var(--off-red-rgb);
+}
 
 .navbar li a {
   font-weight: 700;
   color: var(--midnight-blue);
-  padding: 1.9rem 0;
+  padding: 1.6rem 0;
   font-size: 14px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .navbar li a:hover {
@@ -291,41 +357,39 @@ body {
 
 /* Navbar Links  */
 .m__navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0 0 2rem 0;
 }
 
 .m__navbar li {
-    transition: all .2s ease-in-out;
-    cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .m__navbar li:hover {
-    transform: scaleY(1.1);
+  transform: scaleY(1.1);
 }
 
-
-
 .m__navbar li a {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: var(--midnight-blue);
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--midnight-blue);
 }
 
 .m__navbar li:hover > a {
-    color: var(--off-red-rgb);
+  color: var(--off-red-rgb);
 }
 
 /* Button  */
 .btn {
-  width: 150px;
+  width: 130px;
   height: auto;
-  padding: 0.8rem 0;
+  padding: 0.5rem 0;
   background: var(--midnight-blue);
 
   display: flex;
@@ -353,6 +417,9 @@ body {
   .navbar__container {
     width: 90%;
   }
+  .formational__container {
+    width: 90%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -377,6 +444,16 @@ body {
   .mobile__navbar__text {
     font-size: 1.2rem;
   }
+  .formational__container {
+    justify-content: center;
+  }
+  .formational__social {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .formational__text {
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
@@ -386,6 +463,13 @@ body {
 }
 
 @media (max-width: 450px) {
+  .formational__social {
+    justify-content: space-evenly;
+    gap: 0.2rem;
+  }
+  .formational__social li {
+    font-size: 10px;
+  }
   .navbar__header {
     font-size: 1.1rem;
     text-align: center;
