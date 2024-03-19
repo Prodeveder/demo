@@ -172,7 +172,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
@@ -266,7 +266,7 @@ body {
   background: rgb(0 0 0 /0.8);
   z-index: 1;
 
-  /* display: none; */
+  display: none;
 }
 
 /* Mobile Navbar Container  */
