@@ -1,0 +1,368 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: font;
+    src: url(fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+:root {
+    --primary : #ff4256;
+    --secondary : #201f27;
+    --light : snow;
+
+      /* Generated Colors  */
+    --baby-powder: #f6faf6ff;
+    --forest-green: #2c8f14ff;
+    --forest-green-2: #419331ff;
+    --mint-cream: #f3fef5ff;
+    --midnight-blue: #29216aff;
+    --off-red-rgb: #f21e15ff;
+
+    /* Custom Variables  */
+    --mainWidth : 80%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: font;
+    position: relative;
+}
+
+/* informational Bar  */
+.informational__bar {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+
+    background: #000000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Header Wrapper  */
+.header__wrapper {
+    width: 100%;
+    height: 750px;
+    
+    position: relative;
+}
+
+/* Header Container */
+.header__container {
+    position: absolute;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 /.6);
+}
+
+/* Header Image  */
+.header__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navbar Wrapper  */
+.navbar__wrapper {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(0 0 0 /.9);
+    background: #ffffff;
+}
+
+/* Navbar Container  */
+.navbar__container {
+    width: var(--mainWidth);
+    height: 3rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Navbar Brand  */
+.navbar__brand {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.navbar__brand:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar Logo Image  */
+.navbar__logo {
+    width: 3rem;
+}
+
+
+/* Navbar Header  */
+.navbar__header {
+    font-family: font;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: -2.5px;
+    color: var(--midnight-blue);
+}
+
+/* Navbar  */
+.navbar {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+}
+
+.navbar li {
+    padding: 1.9rem .1rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.navbar li.active {
+    color: var(--off-red-rgb);
+    box-shadow: inset 0 -4px var(--off-red-rgb);
+}
+
+.navbar li.active a {
+    color: red;
+}
+
+.navbar li:hover {
+    box-shadow: inset 0 -4px var(--off-red-rgb); 
+}
+
+.navbar li a {
+    font-weight: 700;
+    color: var(--midnight-blue);
+    padding: 1.9rem 0;
+    font-size: 14px;
+    transition: all .2s ease-in-out;
+}
+
+.navbar li a:hover {
+    color: var(--off-red-rgb);
+}
+
+
+
+/* Menu Bar Open*/
+.menu__open {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s ease-in-out;
+}
+
+/* Menu Icon  */
+.menu__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--midnight-blue);
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.menu__icon:hover {
+    fill: var(--off-red-rgb);
+}
+
+
+/* Mobile Navbar Wrapper  */
+.mobile__navbar__wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 /.8);
+    z-index: 1;
+
+    /* display: none; */
+}
+
+/* Mobile Navbar Container  */
+.mobile__navbar__container {
+    width: 35%;
+    min-width: 450px;
+    height: inherit;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile Navbar  */
+.mobile__navbar{
+    width: 90%;
+    height: 100%;
+}
+
+/* Mobile Navbar Brand  */
+.mobile__navbar__brand {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0 2rem 0;
+}
+
+
+/* Mobile Brand  */
+.mobile__brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+/* Mobile Navbar Image  */
+.mobile__navbar__image {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+
+/* Mobile Navbar Text  */
+.mobile__navbar__text {
+    font-family: font;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: -2.5px;
+    color: var(--midnight-blue);
+}
+
+.mobile__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile__menu__close {
+    width: 2rem;
+    height: 2rem;
+    background: var(--midnight-blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.mobile__menu__close:hover {
+    filter: brightness(.7);
+}
+
+.close__menu__icon {
+    fill: snow;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Button  */
+.btn {
+    width: 150px;
+    height: auto;
+    padding: .8rem 0;
+    background: var(--midnight-blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    color: snow;
+
+    font-weight: bold;
+    transition: all .1s ease-in-out;
+}
+
+.btn:hover{
+    filter: brightness(.7);
+}
+
+
+@media (max-width:1250px) {
+    .navbar__item {
+        display: none;
+    }
+    .menu__open {
+        display: flex;
+    }
+    .navbar__container {
+        width: 90%;
+    }
+}
+
+@media (max-width:650px) {
+    .navbar__container {
+        gap: 2rem;
+    }
+    .navbar__brand {
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    .navbar__header {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .mobile__navbar__container {
+        width: 70%;
+
+        min-width: 390px;
+    }
+
+    .mobile__navbar__text {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+@media (max-width:500px) {
+    .mobile__navbar__text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:450px) {
+    .mobile__navbar__container {
+        min-width: 275px;
+        width: 70%;
+    }
+    .mobile__navbar__text {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
