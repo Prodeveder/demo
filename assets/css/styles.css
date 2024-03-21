@@ -135,7 +135,6 @@ body {
 .header__contents {
   width: var(--mainWidth);
   height: 80%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -604,6 +603,12 @@ body {
 }
 
 @media (max-width: 650px) {
+  .header__wrapper {
+    height: 650px;
+  }
+  .header__contents {
+    height: 70%;
+  }
   .header__card {
     padding: 8px 0;
   }
