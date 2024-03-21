@@ -568,6 +568,150 @@ body {
   color: var(--midnight-blue);
 }
 
+/* About Us Wrapper  */
+.about__us__wrapper {
+  position: relative;
+  top: -2rem;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* About Us Container  */
+.about__us__container {
+  width: var(--mainWidth);
+  height: 500px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 0 0 2rem 0;
+}
+
+/* About Us Image Container  */
+.about__us__image__container {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+}
+
+/* About Us Image  */
+.about__us__img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  filter: brightness(.6);
+  border-radius: 2px;
+
+}
+
+
+/* About Us Banner  */
+.about__us__banner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 50%;
+  height: 30%;
+  background: var(--midnight-blue);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 2px;
+
+}
+
+/* Banner Text  */
+.banner__text {
+  width: 80%;
+  font-size: 2rem;
+  color: snow;
+  font-weight: bold;
+  letter-spacing: -2.5px;
+  text-align: center;
+}
+
+
+/* About Us Content Container  */
+.about__us__content__container {
+  width: 100%;
+  height: 100%;
+}
+
+/* About Us Subheading  */
+.about__us__subheading {
+  color: var(--off-red-rgb);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+/* About Us Header  */
+.about__us__header {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: -4.5px;
+  line-height: 3rem;
+  padding: .5rem 0;
+  color: var(--midnight-blue);
+}
+
+/* About Us Details  */
+.about__us__details {
+  opacity: .7;
+  font-weight: 100;
+}
+
+
+/* About Us List  */
+.about__us__list {
+  list-style: none;
+  margin: 1rem 0 0 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.about__us__list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+
+  font-size: .8rem;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+  transform: scale(.95);
+}
+
+.about__us__list li span {
+  opacity: .9;
+}
+.about__us__list li:hover {
+  transform: scale(1);
+}
+
+.about__us__list li svg {
+  width: 1.5rem;
+  fill: var(--midnight-blue);
+  transform: scale(1.2);
+}
+
+/* About Us Contain Button  */
+.about__us__content__container .btn {
+  margin: 1.5rem 0 0 0;
+  padding: 1rem 1.2rem;
+}
 
 @media (max-width: 1250px) {
   .navbar__item {
@@ -605,7 +749,57 @@ body {
 }
 
 @media (max-width: 950px) {
+
+  .about__us__content__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 1.5rem 0 0 0;
+  }
+
+  .about__us__list {
+    margin: 0;
+  } 
+  .about__us__header {
+    text-align: center;
+    font-size: 2.8rem;
+  }
+
+  .about__us__details {
+    text-align: center;
+    padding: .5rem 0 1.5rem 0;
+    font-size: .9rem;
+  }
+
+  .about__us__list li {
+    text-align: center;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .about__us__container {
+    width: var(--mainWidth);
+    height: auto;
+  
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0 0 2rem 0;
+  }
+
+  .about__us__banner {
+    position: absolute;
+    bottom: -10%;
+    right: 25%;
+  }
+
+  .about__us__img {
+    width: 100%;
+    height: 100%;
+  }
   .header__cards__container {
+    padding: 3rem 0 0 0;
     width: var(--mainWidth);
     height: auto;
   
@@ -621,6 +815,17 @@ body {
 }
 
 @media (max-width: 650px) {
+  .about__us__container {
+    gap: 2.5rem;
+  }
+  .banner__text {
+    width: 80%;
+    font-size: 1.5rem;
+    color: snow;
+    font-weight: bold;
+    letter-spacing: -2.5px;
+    text-align: center;
+  }
   .header__wrapper {
     height: 650px;
   }
@@ -709,6 +914,14 @@ body {
 @media (max-width: 500px) {
   .mobile__navbar__text {
     font-size: 1rem;
+  }
+  .banner__text {
+    width: 80%;
+    font-size: 1.2rem;
+    color: snow;
+    font-weight: bold;
+    letter-spacing: -2.5px;
+    text-align: center;
   }
 }
 
