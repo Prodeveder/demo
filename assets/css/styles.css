@@ -8,6 +8,7 @@
   src: url(fonts/SpaceGrotesk-VariableFont_wght.ttf);
 }
 
+/* The Varibles  */
 :root {
   --primary: #ff4256;
   --secondary: #201f27;
