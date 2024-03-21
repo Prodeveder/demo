@@ -479,6 +479,13 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 16px 0;
+  transition: all .2s ease-in-out;
+
+}
+
+.header__card:hover {
+  background: var(--midnight-blue);
+  color: snow;
 }
 
 /* Header Card Image  */
@@ -497,6 +504,12 @@ body {
 .header__card__image svg {
   width: 3rem;
   fill: var(--midnight-blue);
+  transition: all .2s ease-in-out;
+
+}
+
+.header__card:hover .header__card__image svg {
+  fill: snow;
 }
 
 /* Header Card Content  */
@@ -515,6 +528,11 @@ body {
   color: var(--midnight-blue);
   letter-spacing: -2.5px;
   padding: 1rem 0;
+  transition: all .2s ease-in-out;
+}
+
+.header__card:hover .header__card__title {
+  color: snow;
 }
 
 /* Header Card Details  */
