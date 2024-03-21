@@ -125,6 +125,42 @@ body {
   width: 100%;
   height: 100%;
   background: rgb(0 0 0 /0.6);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Contents  */
+.header__contents {
+  width: var(--mainWidth);
+  height: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Header Title  */
+.header__title {
+  font-size: 4rem;
+  letter-spacing: -3.5px;
+  font-weight: bold;
+  color: snow;
+  width: 70%;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Header Text  */
+.header__text {
+  color: snow;
+  padding: 1rem 0;
+  width: 75%;
+  text-align: center;
+  font-weight: 100;
+  opacity: 0.8;
 }
 
 /* Header Image  */
@@ -158,6 +194,7 @@ body {
   align-items: center;
 }
 
+/* Navbar Item  */
 .navbar__item {
   display: flex;
   justify-content: center;
@@ -172,7 +209,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
@@ -420,9 +457,48 @@ body {
   .formational__container {
     width: 90%;
   }
+
+  .header__title {
+    font-size: 3.5rem;
+    letter-spacing: -3.5px;
+    font-weight: bold;
+    color: snow;
+    width: 90%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .header__text {
+    color: snow;
+    padding: 1rem 0 1.5rem 0;
+    width: 85%;
+    text-align: center;
+    font-weight: 100;
+    opacity: 0.8;
+    font-size: .9rem;
+  }
 }
 
 @media (max-width: 650px) {
+  .header__title {
+    font-size: 3rem;
+    letter-spacing: -3.5px;
+    font-weight: bold;
+    color: snow;
+    width: 90%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .header__text {
+    color: snow;
+    padding: 1rem 0 1.5rem 0;
+    width: 95%;
+    text-align: center;
+    font-weight: 100;
+    opacity: 0.8;
+    font-size: .9rem;
+  }
   .navbar__container {
     gap: 2rem;
   }
@@ -463,6 +539,25 @@ body {
 }
 
 @media (max-width: 450px) {
+  .header__title {
+    font-size: 2.5rem;
+    letter-spacing: -3.5px;
+    font-weight: bold;
+    color: snow;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .header__text {
+    color: snow;
+    padding: 1rem 0 1.5rem 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 100;
+    opacity: 0.8;
+    font-size: .8rem;
+  }
   .formational__social {
     justify-content: space-evenly;
     gap: 0.2rem;
