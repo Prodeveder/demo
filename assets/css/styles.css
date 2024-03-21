@@ -572,7 +572,7 @@ body {
   top: -2rem;
   width: 100%;
   height: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 
   display: flex;
   justify-content: center;
@@ -712,7 +712,7 @@ body {
   width: 100%;
   height: auto;
   padding: 3rem 0 5rem 0;
-  margin-top: 2rem;
+  margin-top: 0;
   background: var(--mid-off);
 
   display: flex;
@@ -822,6 +822,106 @@ body {
   padding: 1rem 0;
 }
 
+/* Why Us Wrapper  */
+.why__us__wrapper {
+  width: 100%;
+  height: auto;
+  padding: 3rem 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Why Us Container  */
+.why__us__container {
+  width: var(--mainWidth);
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Why Contents  */
+.why__us__contents {
+  display: block;
+}
+
+/* Why Header */
+.why__header {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: -4.5px;
+  line-height: 3rem;
+  padding: 0.5rem 0;
+  color: var(--midnight-blue);
+}
+
+/* Why Sub Heading  */
+.why__subheading {
+  color: var(--off-red-rgb);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+/* Why Details */
+.why__details {
+  opacity: 0.7;
+  font-weight: 100;
+  font-size: 0.9rem;
+  padding: .8rem 0;
+}
+
+/* Why List  */
+.why__list {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Why */
+.why {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Why Title  */
+.why__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  color: var(--midnight-blue);
+}
+
+.why__title svg {
+  width: 1.5rem;
+  fill: var(--midnight-blue);
+}
+
+/* Why text  */
+.why__text {
+  opacity: 0.7;
+  font-weight: 100;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
 @media (max-width: 1250px) {
   .navbar__item {
     display: none;
@@ -870,6 +970,17 @@ body {
 }
 
 @media (max-width: 950px) {
+  .why__list {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
   .services__header {
     text-align: center;
   }
@@ -883,7 +994,7 @@ body {
   .services__details {
     text-align: center;
     width: 90%;
-    padding: .5rem 0 1.5rem 0;
+    padding: 0.5rem 0 1.5rem 0;
   }
 
   .about__us__wrapper {
@@ -925,7 +1036,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
-    padding: 0 0 2rem 0;
+    padding: 0 0 0 0;
   }
 
   .about__us__banner {
@@ -954,13 +1065,48 @@ body {
   }
 }
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
   .services {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 650px) {
+  .why__us__contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    flex-direction: column;
+  }
+  .why__header,
+  .why__subheading,
+  .why__details  {
+    text-align: center;
+  }
+  .why__list {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .why__title {
+    justify-content: center;
+  }
+
+  .why__text {
+    text-align: center;
+  }
+  .why:nth-child(4),
+  .why:nth-child(5),
+  .why:nth-child(6) {
+    display: none;
+  }
 
   .about__us__container {
     gap: 2.5rem;
@@ -1061,7 +1207,7 @@ body {
   .services__details {
     text-align: center;
     width: 100%;
-    padding: .5rem 0 1.5rem 0;
+    padding: 0.5rem 0 1.5rem 0;
   }
   .mobile__navbar__text {
     font-size: 1rem;
